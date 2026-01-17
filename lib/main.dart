@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:timezone/data/latest.dart' as tz;
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'data/services/local_storage_service.dart';
 import 'data/services/notification_service.dart';
@@ -16,21 +15,21 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Initialize timezone
-  tz.initializeTimeZones();
-
-  final String timeZoneName = await FlutterNativeTimezone.getLocalTimezone();
-
-  tz.setLocalLocation(tz.getLocation(timeZoneName));
-
-  // Initialize notification service
-  await NotificationService().initialize();
+  try {
+    final timeZoneName = await FlutterTimezone.getLocalTimezone();
+    tz.setLocalLocation(tz.getLocation(timeZoneName.identifier));
+  } catch (e) {
+    debugPrint("Could not solve timezone, defaulting to UTC");
+  }
 
   // Initialize SharedPreferences
   final prefs = await SharedPreferences.getInstance();
 
   // Initialize services
   final localStorageService = LocalStorageService(prefs);
+  // Initialize notification service
   final notificationService = NotificationService();
+  await notificationService.initialize();
 
   // Initialize repositories
   final reminderRepository =
