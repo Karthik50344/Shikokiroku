@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:shiki/presentation/views/widgets/reminder_action.dart';
+import 'package:shikokiroku/presentation/views/widgets/reminder_action.dart';
 import '../../../domain/models/reminder.dart';
 import '../../bloc/recharge/recharge_bloc.dart';
 import '../../router/app_router.dart';

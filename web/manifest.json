@@ -1,6 +1,6 @@
 {
-    "name": "shiki",
-    "short_name": "shiki",
+    "name": "shikokiroku",
+    "short_name": "shikokiroku",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

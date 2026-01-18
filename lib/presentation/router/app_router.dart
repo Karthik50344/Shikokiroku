@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:shiki/presentation/views/screens/home_screen.dart';
+import 'package:shikokiroku/presentation/views/screens/home_screen.dart';
 import '../../domain/models/reminder.dart';
 import '../views/screens/reminders_screen.dart';
 import '../views/screens/recharge_screen.dart';

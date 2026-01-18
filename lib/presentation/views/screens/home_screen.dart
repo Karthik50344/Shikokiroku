@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
-import 'package:shiki/domain/models/reminder.dart';
-import 'package:shiki/presentation/views/widgets/reminder_action.dart';
+import 'package:shikokiroku/domain/models/reminder.dart';
+import 'package:shikokiroku/presentation/views/widgets/reminder_action.dart';
 import '../../bloc/reminder/reminder_bloc.dart';
 import '../../bloc/recharge/recharge_bloc.dart';
 import '../../router/app_router.dart';
@@ -134,7 +134,7 @@ class HomeTab extends StatelessWidget {
           floating: false,
           pinned: true,
           systemOverlayStyle: SystemUiOverlayStyle.light,
-          title: const Text('Shiki', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.purple)),
+          title: const Text('Shikokiroku', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.purple)),
           actions: [
             Container(
               height: 40,

@@ -1,4 +1,4 @@
-# shiki (Record of thoughts)
+# Shikokiroku (Record of thoughts)
 
 A comprehensive reminder application with mobile recharge tracking functionality, built with **MVVM architecture**, **BLoC state management**, **GoRouter navigation**, and **SharedPreferences storage**.
 
